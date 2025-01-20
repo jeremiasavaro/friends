@@ -3,15 +3,22 @@
   <head>
     <title>InstagramClone</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">    
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-
+    J6qa4849blE2+poT4Wnykhv5vZF5SrPo0iEjwBvKU7imGFAVOwwj1yYFORSJOZ+n" crossorigin="anonymous"></script> <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvblyZFJoft+2mJbHaEWldivi910Yy5n3zV9zzTtml3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvblyZFJoft+2mJbHaEWldivi910Yy5n3zV9zzTtml3UksdQRVvoxMfooAo" crossorigin="anonymous"></script><script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js" integrity="sha384- wfSDF2E50Y2D1uUdj003uMBJnjuUD4h7YwaYdliqfktjoUod8GCExl30g8ifwB6" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-DevHe/X+R7YKIZDRvuzKMRqM+OrBnVFBL6D0itfPri4tjfHxa WutUpFmBp4vmVor" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
     <%= javascript_importmap_tags %>
   </head>
 
   <body>
+    <%= render "layouts/navbar" %>
     <%= yield %>
+    <%= render "layouts/footer" %>
   </body>
 </html>
