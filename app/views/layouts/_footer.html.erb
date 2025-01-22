@@ -2,25 +2,25 @@
   <div class="container">
     <div class="row">
       <div class="col-md-4">
-        <h6>About Us</h6>
-        <p>Information about the company and its purpose.</p>
+        <h6 class="font-weight-bold">About Us</h6>
+        <p>A page that tries to imitate Instagram posts in order to practice Ruby on Rails.</p>
       </div>
       <div class="col-md-4">
-        <h6>Quick Links</h6>
+        <h6 class="font-weight-bold">Quick Links</h6>
         <ul class="list-unstyled">
-          <li><a href="#" class="text-white">Home</a></li>
+          <li><%= link_to "Home", root_path, class: "text-white" %></li>
           <li><a href="#" class="text-white">Features</a></li>
           <li><a href="#" class="text-white">Pricing</a></li>
         </ul>
       </div>
       <div class="col-md-4">
-        <h6>Contact</h6>
-        <p>Email: info@example.com</p>
-        <p>Phone: +123456789</p>
+        <h6 class="font-weight-bold">Contact</h6>
+        <p>Email: jeremiasavaro7@gmail.com</p>
+        <p>Phone: +54 358-600-1336</p>
       </div>
     </div>
-    <div class="text-center mt-3">
-      &copy; 2025 MyWebsite
+    <div class="text-center mt-3 font-italic">
+      &copy; 2025 Instagram Clone
     </div>
   </div>
 </footer>

@@ -7,7 +7,7 @@
   <div class="collapse navbar-collapse" id="navbarNav">
     <ul class="navbar-nav me-auto">
       <li class="nav-item">
-        <%= link_to "Features", "#", class: "nav-link" %>
+        <%= link_to "Upload post", new_post_path, class: "nav-link" %>
       </li>
       <li class="nav-item">
         <%= link_to "Pricing", "#", class: "nav-link" %>
@@ -16,8 +16,9 @@
         <%= link_to "Contact", "#", class: "nav-link" %>
       </li>
     </ul>
-    <form class="d-flex">
-      <input class="form-control ml-1 me-2" type="search" placeholder="Search" aria-label="Search">
+
+    <form class="d-flex ml-auto">
+      <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
       <button class="btn btn-outline-light ml-2" type="submit">Search</button>
     </form>
   </div>
