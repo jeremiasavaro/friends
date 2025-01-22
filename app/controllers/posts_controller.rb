@@ -63,8 +63,9 @@ class PostsController < ApplicationController
       @post = Post.find(params[:id])
     end
 
-    # Only allow a list of trusted parameters through.
+    # Definimos los parámetros permitidos para la creación de un post
+    # Añadimos el campo images como un arreglo, para poder añadir mas de una imagen por publicación
     def post_params
-      params.require(:post).permit(:title, :description, :keywords)
+      params.require(:post).permit(:title, :description, :keywords, images: [])
     end
 end
