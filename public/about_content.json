@@ -1,0 +1,19 @@
+{
+    "title": "Acerca de InstaClone",
+    "description": "InstaClone es un proyecto de aprendizaje desarrollado por un estudiante de la UNRC para explorar Ruby on Rails y construir una red social similar a Instagram.",
+    "sections": [
+      {
+        "heading": "Nuestro objetivo",
+        "content": "El objetivo de este proyecto es dominar el desarrollo web full-stack, aprendiendo a integrar front-end y back-end de manera eficiente."
+      },
+      {
+        "heading": "Características principales",
+        "content": "InstaClone incluye funciones como publicación de fotos, likes, comentarios, y perfiles de usuarios."
+      },
+      {
+        "heading": "Sobre el desarrollador",
+        "content": "Este proyecto fue creado por Jeremías Avaro, estudiante de la UNRC."
+      }
+    ]
+  }
+  

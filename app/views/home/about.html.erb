@@ -1,2 +1,15 @@
-<h1>Welcome to my Instagram clone using Ruby on Rails</h1>
-<div>This is te static about page</div>
+<% require 'json' %>
+<% json_path = Rails.root.join("public", "about_content.json") %>
+<% about_data = JSON.parse(File.read(json_path)) %>
+
+<div class="about-container">
+  <h1><%= about_data["title"] %></h1>
+  <p class="description"><%= about_data["description"] %></p>
+
+  <% about_data["sections"].each do |section| %>
+    <div class="section">
+      <h2><%= section["heading"] %></h2>
+      <p><%= section["content"] %></p>
+    </div>
+  <% end %>
+</div>
