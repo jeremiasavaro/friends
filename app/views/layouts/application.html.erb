@@ -18,6 +18,13 @@
       crossorigin="anonymous"
     ></script>
 
+    <!-- Swiper -->
+    <link 
+    rel="stylesheet"
+    href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
 
     <!-- Rails Meta Tags -->
     <%= csrf_meta_tags %>
@@ -27,7 +34,7 @@
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
   </head>
 
-  <body>
+  <body style="background-color: #E8E9F3">
     <%= render "layouts/navbar" %>
     <%= yield %>
     <%= render "layouts/footer" %>

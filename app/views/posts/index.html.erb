@@ -1,4 +1,5 @@
 <%= stylesheet_link_tag("post") %>
+
 <p style="color: green"><%= notice %></p>
 
 <h1>Posts</h1>
@@ -7,5 +8,24 @@
   <% @posts.each do |post| %>
     <%= render post %>
   <% end %>
-</div>
+</div>  
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const swipers = document.querySelectorAll(".swiper");
+    swipers.forEach((swiperContainer) => {
+      new Swiper(swiperContainer, {
+        loop: true,
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+      });
+    });
+  });
+</script>
 
