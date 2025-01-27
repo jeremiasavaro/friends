@@ -1,10 +1,26 @@
 <p style="color: green"><%= notice %></p>
 
-<%= render @post %>
+<div class="mb-4">
+  <%= render @post %>
+</div>
 
-<div>
-  <%= link_to "Edit this post", edit_post_path(@post) %> |
-  <%= link_to "Back to posts", posts_path %>
+<%= render "comments/form", comment: @comment %>
 
-  <%= button_to "Destroy this post", @post, method: :delete %>
+
+<div class= "d-flex flex-column align-items-center justify-content-center text-center mt-5 mb-4">
+  <%= link_to posts_path, class: "btn btn-secondary mb-2 mr-3" do %>
+    <i class="fas fa-arrow-left"></i> Back to posts
+  <% end %>
+
+  <% if user_signed_in? && current_user.id == @post.user.id %>
+    <div class="d-flex gap-3">
+      <%= link_to edit_post_path(@post), class: "btn btn-primary mr-1" do %>
+        <i class="fas fa-edit"></i> Edit this post
+      <% end %>
+
+      <%= button_to @post, method: :delete, class: "btn btn-danger ml-1" do %>
+        <i class="fas fa-trash"></i> Destroy this post
+      <% end %>
+    </div>
+  <% end %>
 </div>

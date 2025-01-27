@@ -5,6 +5,7 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
   has_many :posts
+  has_many :comments
 
   #Nos aseguramos de crear un id único, random y seguro para cada usuario
   before_create :randomize_id

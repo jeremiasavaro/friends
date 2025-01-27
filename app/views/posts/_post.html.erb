@@ -42,10 +42,18 @@
 
       <!-- Descripción del post -->
       <div class="post-description">
-        <p><%= post.description %></p>
-        <p><%= post.keywords %></p>
+        <p style="margin-bottom: 5px"><%= post.description %></p>
+        <p style="margin-bottom: 5px"><%= post.keywords %></p>
       </div>
     <% end %>
+    <div style="padding: 0px 15px; font-size: 14px;"> 
+      <p style="font-weight: bold; margin: 0px"> Comments:</p> 
+      <% @post.comments.each do |comment| %>
+        <div style="margin-left:10px;">
+          <p style="margin-bottom: 5px"><%= comment.text %></p>
+        </div>
+      <%end%>
+    </div>
   </div>
 
 <% end %>
