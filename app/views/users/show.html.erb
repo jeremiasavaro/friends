@@ -1,0 +1,31 @@
+<div class="row">
+    <div class="col-xl-4 col-md-6 col-sm-8 col-10" style="margin: auto; margin-top: 20px; margin-bottom:20px;background-color: #f8f8f8; padding: 15px; border-radius: 6px">
+        <h1><%= @user.username %> Profile</h1>
+        <%=@user.bio%>
+    </div>
+</div>
+<h2 class="text-center mt-3">My posts:</h2>
+<div id="posts" class="text-center">
+  <% @posts.each do |post| %>
+    <%= render post %>
+  <% end %>
+</div> 
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const swipers = document.querySelectorAll(".swiper");
+    swipers.forEach((swiperContainer) => {
+      new Swiper(swiperContainer, {
+        loop: true,
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+      });
+    });
+  });
+</script>
