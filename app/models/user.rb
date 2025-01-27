@@ -4,8 +4,9 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 
-  has_many :posts
-  has_many :comments
+  has_many :posts #Añadimos la relación con los posts
+  has_many :comments #Añadimos la relación con los comentarios
+  has_one_attached :avatar #Añadimos la relación con el avatar
 
   #Nos aseguramos de crear un id único, random y seguro para cada usuario
   before_create :randomize_id

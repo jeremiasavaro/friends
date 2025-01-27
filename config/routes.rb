@@ -1,6 +1,9 @@
 Rails.application.routes.draw do
   resources :comments
 
+  # Sirve para personalizar las rutas que usa la gema devise para un modelo particular (user en este caso)
+  # Cada get sirve para crear una ruta adicional de las que nos da devise para estas tareas específicas
+  # En este caso, se añaden rutas para el registro, inicio de sesión y cierre de sesión de un usuario
   devise_scope :user do
     get '/users', to: 'devise/registrations#new'
     get '/users/passwords', to: 'devise/passwords#new'
@@ -20,6 +23,6 @@ Rails.application.routes.draw do
   # Can be used by load balancers and uptime monitors to verify that the app is live.
   get "up" => "rails/health#show", as: :rails_health_check
 
-  # Define the root (home page) route to be the posts index page
+  # Definimos la pagina de post como la ruta principal de la aplicación
   root "posts#index"
 end

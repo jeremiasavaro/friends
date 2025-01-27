@@ -9,7 +9,7 @@ class PostsController < ApplicationController
 
   # GET /posts/1 or /posts/1.json
   def show
-    @comment = @post.comments.build
+    @comment = @post.comments.build # Para poder crear un nuevo comentario en la vista de un post
   end
 
   def myposts

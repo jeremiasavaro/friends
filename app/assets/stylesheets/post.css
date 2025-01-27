@@ -1,12 +1,24 @@
+.post-user{
+  text-decoration: none; 
+  color: inherit;
+  font-size: 18px;
+}
+.post-user:hover{
+  text-decoration: underline; 
+  color: inherit;
+  opacity: 0.9;
+}
+
 .text-post {
   background-color: #fff;
   border: 1px solid #ddd;
   border-radius: 10px;
   margin: 30px auto;
+  margin-top: 0px;
   max-width: 600px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   overflow: hidden;
-  height: 180px;
+  height: 150px;
   transition: height .5s;
   interpolate-size: allow-keywords;
 }
@@ -16,10 +28,10 @@
   text-decoration: none; 
   color: inherit;
   opacity: 0.9;
-  background-color: #ece7e7; /* Fondo más oscuro */
-  transform: scale(1.01); /* Aumenta ligeramente el tamaño */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Aumenta la sombra */
-  cursor: pointer; /* Indicador de clic */
+  background-color: #ece7e7; 
+  transform: scale(1.01);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  cursor: pointer; 
 }
 
 .post-container {
@@ -40,10 +52,10 @@
   text-decoration: none; 
   color: inherit;
   opacity: 0.9;
-  background-color: #ece7e7; /* Fondo más oscuro */
-  transform: scale(1.01); /* Aumenta ligeramente el tamaño */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Aumenta la sombra */
-  cursor: pointer; /* Indicador de clic */
+  background-color: #ece7e7; 
+  transform: scale(1.01); 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+  cursor: pointer; 
 }
 
 .post-header {
@@ -105,11 +117,11 @@
   color: #000;
 }
 
-/* Aseguramos que las flechas están por encima del enlace */
+
 .swiper-control {
   position: absolute;
-  z-index: 2; /* Por encima del enlace */
-  pointer-events: auto; /* Permitir que las flechas capturen eventos de clic */
+  z-index: 2; 
+  pointer-events: auto; 
 }
 
 .swiper-button-next,
@@ -125,7 +137,7 @@
   transition: all 0.3s ease;
 }
 
-/* Hover en las flechas */
+
 .swiper-button-next:hover,
 .swiper-button-prev:hover {
   background-color: #000;
@@ -134,8 +146,8 @@
 }
 
 .comments-container {
-  max-height: 300px; /* Altura máxima de la barra deslizante */
-  overflow-y: auto; /* Activar el scroll vertical */
-  border-radius: 5px; /* Bordes redondeados */
+  max-height: 300px; 
+  overflow-y: auto;
+  border-radius: 5px; 
 }
 
