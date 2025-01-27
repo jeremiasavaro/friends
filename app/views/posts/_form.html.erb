@@ -12,6 +12,7 @@
         </div> 
       <% end %>
     </div>
+
     <%#Hacemos lo mismo para los demas campos%>
     <div>
       <% invalidD = post.errors.include?(:description)%>
@@ -33,6 +34,10 @@
           <%= post.errors.full_messages_for(:keywords).join(", ") %> 
         </div> 
       <% end %>
+    </div>
+
+    <div>
+      <%= form.text_field :user_id, type:"hidden", value: current_user.id %>
     </div>
 
     <%= form.file_field :images, multiple: true, style: "margin-top: 16px" %>

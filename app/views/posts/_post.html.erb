@@ -5,6 +5,7 @@
   <div id="<%= dom_id post %>" class="text-post">
   <%= link_to post, class: "post-link" do %>
     <div class="post-header">
+      <p><%= post.user.email %></p>
       <p><%= post.title %></p>
     </div>
     <div class="post-description">
