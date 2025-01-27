@@ -1,0 +1,31 @@
+<%= stylesheet_link_tag("post") %>
+
+<p style="color: green"><%= notice %></p>
+
+<h1><%= current_user.email %>, Posts Page</h1>
+
+<div id="posts" class="text-center">
+  <% @posts.each do |post| %>
+    <%= render post %>
+  <% end %>
+</div>  
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const swipers = document.querySelectorAll(".swiper");
+    swipers.forEach((swiperContainer) => {
+      new Swiper(swiperContainer, {
+        loop: true,
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+      });
+    });
+  });
+</script>
+
