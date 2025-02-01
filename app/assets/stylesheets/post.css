@@ -18,7 +18,7 @@
   max-width: 600px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   overflow: hidden;
-  height: 150px;
+  height: 200px;
   transition: height .5s;
   interpolate-size: allow-keywords;
 }
@@ -35,7 +35,7 @@
 }
 
 .post-container {
-  height: 530px;
+  height: 580px;
   background-color: #fff;
   border: 1px solid #ddd;
   border-radius: 10px;

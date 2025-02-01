@@ -7,6 +7,7 @@ class Post < ApplicationRecord
   has_many_attached :images #Añadimos la relación con las imágenes
   belongs_to :user  #Añadimos la relación con el usuario
   has_many :comments #Añadimos la relación con los comentarios
+  has_many :likes #Añadimos la relacion con los likes
 
   before_create :randomize_id
   private

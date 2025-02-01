@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :likes, only: [:create, :destroy]
   resources :comments
 
   # Sirve para personalizar las rutas que usa la gema devise para un modelo particular (user en este caso)
